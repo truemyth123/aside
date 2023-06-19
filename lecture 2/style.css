@@ -1,0 +1,54 @@
+
+/* 
+1 rem == 10 px
+we go for these dimension to achive RWD (responsive web design)
+100vh (vh= viewport height) = 100%                
+*/
+/*to solve issues related to border, padding, margin issues
+ we take a concept under consideration of border box */
+html{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    height: 100%;
+
+}
+/*we give the sizing to the grid using grid box*/
+/*class should always start with the (.) dot*/
+.banking-grid{
+    display: grid;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+    grid-template-columns: 1fr; 
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100vh;
+}
+/*header main and footer is the part of grid system
+here we are telling that these all are the part of grid system*/
+header{
+grid-area: 'header';
+font-size: 3rem;
+background-color: blueviolet;
+color: aliceblue;
+}
+main{
+grid-area: 'main';
+background-color: rgb(255, 255, 255);
+}
+
+footer{
+grid-area: 'footer';
+color: aliceblue;
+background-color: blueviolet;
+}
+
+
+.row{
+    /*to display the name in center*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
